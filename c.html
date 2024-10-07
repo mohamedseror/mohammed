@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Professional Profile</title>
+    
+    <!-- استيراد خط Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    
+    <style>
+        /* إعدادات الصفحة */
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(135deg, #f0f0f0 40%, #4CAF50); /* تدرج لوني */
+            font-family: 'Poppins', sans-serif;
+            color: #333;
+            text-align: center;
+        }
+
+        /* إعدادات الصورة مع التأثير */
+        .profile-pic {
+            border-radius: 50%;
+            width: 200px;
+            height: 200px;
+            object-fit: cover;
+            border: 5px solid #fff;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+            opacity: 0;
+            transform: scale(0.5) translateY(-50px);
+            animation: fadeInZoom 1.5s ease-out forwards;
+        }
+
+        /* حركة التكبير والظهور */
+        @keyframes fadeInZoom {
+            0% {
+                opacity: 0;
+                transform: scale(0.5) translateY(-50px);
+            }
+            100% {
+                opacity: 1;
+                transform: scale(1) translateY(0);
+            }
+        }
+
+        /* تنسيق النصوص */
+        h1 {
+            margin: 20px 0 10px;
+            font-size: 2.5rem;
+            font-weight: 600;
+            color: #333; /* لون داكن للنص */
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeInText 1.5s ease-out forwards 0.5s;
+        }
+
+        p {
+            margin: 10px 0;
+            font-size: 1.2rem;
+            line-height: 1.6;
+            color: #222; /* لون داكن أكثر ليكون مرئيًا على الخلفية الفاتحة */
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeInText 1.5s ease-out forwards 0.8s;
+        }
+
+        strong {
+            color: #ff5722; /* لون مميز للنص المحدد */
+        }
+
+        em {
+            font-style: italic;
+            color: #0066cc; /* لون أزرق للنص المائل */
+        }
+
+        /* حركة النصوص */
+        @keyframes fadeInText {
+            0% {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* زر تفاعلي */
+        .btn {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 25px;
+            font-size: 1rem;
+            color: #fff; /* لون الزر */
+            background-color: #ff5722; /* لون الزر البرتقالي */
+            border: none;
+            border-radius: 25px;
+            cursor: pointer;
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            opacity: 0;
+            animation: fadeInText 1.5s ease-out forwards 1s;
+        }
+
+        /* تأثير hover على الزر */
+        .btn:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 20px rgba(0, 0, 0, 0.2);
+        }
+    </style>
+</head>
+<body>
+    <!-- الصورة الشخصية -->
+    <img src="images/mohamed.jpeg" alt="Profile Picture" class="profile-pic">
+    
+    <!-- عنوان الترحيب -->
+    <h1>Welcome to Mohammed Reda's Profile</h1>
+    
+    <!-- نص تعريفي -->
+    <p>Hello! My name is <strong>Mohammed Reda</strong>. I am 16 years old and I live in Malaysia. I love programming and aspire to become a <em>software developer</em>.</p>
+    
+    <!-- زر تفاعلي -->
+    <a href="#" class="btn">Contact Me</a>
+</body>
+</html>
